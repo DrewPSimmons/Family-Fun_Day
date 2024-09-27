@@ -1,0 +1,142 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.container {
+    max-width: 100%; /* Allow container to use full width */
+    margin: auto;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun font for the title */
+    color: #FF5733; /* Colorful title */
+    text-shadow: 2px 2px #FFC300; /* Adds a shadow for depth */
+}
+
+.teams {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.team-box {
+    background-color: lightgray;
+    padding: 10px;
+    margin: 5px;
+    width: 120px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+    .team-box:hover {
+        background-color: darkgray;
+    }
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 cards per row */
+    grid-template-rows: repeat(3, 1fr); /* 3 rows */
+    gap: 5px; /* Smaller gap between cards */
+    margin: auto; /* Center the grid */
+    width: fit-content; /* Allow width to fit the cards */
+}
+
+.card {
+    width: 100px; /* Width for square cards */
+    height: 100px; /* Height for square cards */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    color: white;
+    background-color: #007BFF; /* Default background color */
+    font-size: 16px; /* Adjusted font size for better fit */
+    transition: transform 0.2s; /* Smooth transition */
+}
+
+    .card.revealed {
+        border: 2px solid black;
+    }
+
+    .card:hover {
+        transform: scale(1.05); /* Slightly enlarge on hover */
+    }
+
+.reset-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #FF5733; /* Match the title color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .reset-button:hover {
+        background-color: #FFC300; /* Lighter color on hover */
+    }
+
+.notification {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+    transition: opacity 0.5s ease;
+}
+
+.switch-prompt {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 2px solid #007BFF;
+    border-radius: 10px;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+    .switch-prompt h3 {
+        margin-bottom: 10px;
+    }
+
+.team-selection button {
+    margin: 5px;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .team-selection button:hover {
+        background-color: #0056b3;
+    }
+
+.close-button {
+    margin-top: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .close-button:hover {
+        background-color: darkred;
+    }

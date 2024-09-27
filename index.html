@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Family Fun Day</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Family Fun Day</h1>
+        <div class="teams">
+            <div id="team1" class="team-box" onclick="selectTeam(1)">
+                <h2>Team 1</h2>
+                <p id="points1">Points: 0</p>
+            </div>
+            <div id="team2" class="team-box" onclick="selectTeam(2)">
+                <h2>Team 2</h2>
+                <p id="points2">Points: 0</p>
+            </div>
+            <div id="team3" class="team-box" onclick="selectTeam(3)">
+                <h2>Team 3</h2>
+                <p id="points3">Points: 0</p>
+            </div>
+            <div id="team4" class="team-box" onclick="selectTeam(4)">
+                <h2>Team 4</h2>
+                <p id="points4">Points: 0</p>
+            </div>
+        </div>
+        <div class="cards">
+            <!-- Cards will be generated here -->
+        </div>
+        <div class="notification" id="notification"></div>
+        <button class="reset-button" onclick="resetGame()">Reset Game</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
